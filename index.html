@@ -11,16 +11,20 @@
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
-          verify: { projectID: '67c1617de0313ca90648344a' },
+          verify: { projectID: '67d11217e1220f97e80ad763' },
           url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production', 
-          voice: { 
-            url: "https://runtime-api.voiceflow.com" 
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          },
+          assistant: { 
+            persistence: 'sessionStorage' // Xóa lịch sử chat khi tải lại trang
           }
         });
       }
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
+</script>
 </script>
 </body>
 </html>
